@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "C:\\MinGW\\include",
-                "C:\\Users\\joaop\\Documents\\GitHubProjects\\2D-KP-Optmization\\src\\"
+                "C:\\Users\\joaop\\Documents\\GitHubProjects\\2D-KP-Optmization\\src\\",
+                "C:\\Users\\joaop\\Documents\\GitHubProjects\\2D-KP-Optmization\\src\\libs\\"
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "C:\\MinGW\\bin\\g++.exe",
