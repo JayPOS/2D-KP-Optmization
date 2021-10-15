@@ -1,8 +1,13 @@
+#ifndef __2DKP_H
+
+#define __2DKP_H
+
 #include "includes.h"
 
 class Item
 {
 private:
+    int id;
     int w; // width (y)
     int l; // length (x)
     f64 v; // value (should be area if 0)
@@ -10,6 +15,7 @@ private:
 public:
     Item(int w, int l, f64 v);
 
+    int getId();
     int getW();
     int getL();
     int getV();
@@ -36,3 +42,5 @@ public:
 };
 
 int compare(Item *&a, Item *&b);
+
+#endif

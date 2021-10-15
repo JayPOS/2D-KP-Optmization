@@ -1,5 +1,5 @@
-#include "src\2dkp.cpp"
-#include "src\functions.cpp"
+#include "src/2dkp.cpp"
+#include "src/functions.cpp"
 
 int main()
 {

@@ -1,10 +1,15 @@
-#include "libs\2dkp.h"
+#include "libs/2dkp.h"
 
 Item::Item(int w, int l, f64 v)
 {
     this->w = w;
     this->l = l;
     this->v = v;
+}
+
+int Item::getId()
+{
+    
 }
 
 int Item::getW()

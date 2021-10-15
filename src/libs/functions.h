@@ -1,3 +1,5 @@
+#include "2dkp.h"
+
 #define FUNCTIONS_H
 #ifdef FUNCTIONS_H
 
