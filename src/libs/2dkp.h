@@ -1,36 +1,46 @@
-#include "bits/stdc++.h"
+#ifndef __2DKP_H
 
-using namespace std;
+#define __2DKP_H
 
-using f64 = double;
-using f32 = float;
-using i32 = long;
-using i64 = long long;
-using i = int;
-
-using vi = vector<i>;
-using ii = pair<i,i>;
-
+#include "includes.h"
 
 class Item
 {
 private:
+    int id;
     int w; // width (y)
     int l; // length (x)
     f64 v; // value (should be area if 0)
 
 public:
-    Item(int w, int l, int v);
+    Item(int w, int l, f64 v);
+
+    int getId();
+    int getW();
+    int getL();
+    int getV();
+    int getProfit();
 };
 
-class Backpack2D
+class Knapsack2D
 {
 private:
-    int n;
+    int n; // number of itens
+    int w; // width (y)
+    int l; // length (x)
+public:
     vi bits;
     vector<Item *> items;
-public:
-    Backpack2D();
-    int initializeItems();
-    int createItems(int w, int l, f64 v);
+
+    Knapsack2D(int n, int w, int l);
+    
+    int addItem(int w, int l, f64 v);
+    int getKnapsackArea();
+    int getN();
+    int getW();
+    int getL();
 };
+
+int compare(Item *&a, Item *&b);
+
+#endif

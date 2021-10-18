@@ -1,32 +1,59 @@
-#include "libs\2dkp.h"
+#include "libs/2dkp.h"
 
-Item::Item(int w, int l, int v)
+Item::Item(int w, int l, f64 v)
 {
     this->w = w;
     this->l = l;
-    this->v = v == 0 ? w*l : v;
+    this->v = v;
 }
 
-int Backpack2D::createItems(int w, int l, f64 v)
+int Item::getId()
 {
+    
+}
+
+int Item::getW()
+{
+    return this->w;
+}
+
+int Item::getL()
+{
+    return this->l;
+}
+
+int Item::getV()
+{
+    return (this->v) ? this->v : this->w*this->v;
+}
+
+int Item::getProfit()
+{
+    return this->getV()/(this->getW()*this->getL());
+}
+
+int Knapsack2D::addItem(int w, int l, f64 v)
+{
+    Item *item = new Item(w , l, v);
+
+    if(!item) return HEAP_OVERFLOW;
+
+    this->items.push_back( item );
     return 1;
 }
 
-int Backpack2D::initializeItems()
+Knapsack2D::Knapsack2D(int n, int w, int l)
 {
-    //create every item and push into vector of items
-    for (int i = 0; i < this->n; i++)
-    {
-        int w, l, v;
-        cin >> w >> l >> v;
-        Item *item = new Item(w, l, v);
-        this->items.push_back(item);
-    }
+    this->n = n;
+    this->w = w;
+    this->l = l;
 }
 
-Backpack2D::Backpack2D()
+int Knapsack2D::getKnapsackArea()
 {
-    cin >> this->n;
-    bits.resize(n, 0);
-    Backpack2D::initializeItems();
+    return this->w*this->l;
+}
+int Knapsack2D::getN()
+{
+    return this->n;
 }
