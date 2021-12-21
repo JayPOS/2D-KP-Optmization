@@ -3,6 +3,9 @@
 
 #include "bits/stdc++.h"
 #include <cstdlib>
+#include <random>
+#include <chrono>
+#include <time.h>
 
 using namespace std;
 
@@ -15,5 +18,8 @@ using vi = vector<int>;
 using ii = pair<int,int>;
 
 const int HEAP_OVERFLOW = -1;
+const int RANDOM = 3;
+const int SEMI = 2;
+const int NORMAL = 1;
 
 #endif
